@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grading System</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header><h2 align="center">STUDENT GRADING SYSTEM</h2></header>
+        <form id="form-div" onsubmit="return(getGrade())">
+                <input class="text-field" type="text" placeholder="Student Name" id="student-name" required>
+                <br>
+                <input class="text-field" type="text" placeholder="Subject" id="subject" required>
+                <br>
+                <input class="text-field" type="text" placeholder="Exam score" id="score" required>
+                <br>
+                <input type="submit" name="GRADE" id="grade-btn">
+
+        </form>
+        <div id="clear"></div>
+        <hr>
+        <div id="result-div">
+            <div id="results">
+                <h2 id="display-name"></h2>
+                    <p id="display-subject"></p>
+                    <p id="display-score"></p>
+                    <p id="display-grade"></p>
+            </div>
+        </div>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="script.js">
+</body>
+</html>
