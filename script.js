@@ -1,21 +1,36 @@
-let studentName = document.getElementById("student-name").value;
-let subject = document.getElementById("subject");
-let score = document.getElementById("score");
-let gradeBtn = document.getElementById("grade-btn");
-let displayName = document.getElementBtId('display-name');
-let displaySubject = document.getElementBtId('display-subject');
-let displayScore = document.getElementBtId('display-score');
-let displayGrade = document.getElementBtId('display-grade');
+let studentName = document.getElementById("student-name");
+	let subject = document.getElementById("subject");
+	let score = document.getElementById("score");
+	let gradeBtn = document.getElementById("grade-btn");
+	let displayName = document.getElementBtId('display-name');
 
-function getGrade(){
-	preventDefault();
-	displayName.textContent = "NAME:" + "" + studentName.value;
-	displaySubject.textContent = "SUBJECT:" + "" + subject.value;
-	displayScore.textContent = "SCORE:" + "" + score.value;
+	gradeBtn.addEventListener ("click", getGrade);
+	function getGrade()
+		{
+			if (studentName.value!=="" && studentName.value!==null) 
+			{
+				return true;
+				else if (subject.value!=="" && subject.value!==null) {
+				return true;
+				else if (score.value!=="" && score.value!==null) {
+				return true;
+			}
+			displaySubject = document.getElementBtId('display-subject');
+			displayScore = document.getElementBtId('display-score');
+			displayGrade = document.getElementBtId('display-grade');
+			displayName = document.getElementBtId('display-name');
 
-	if (score.value >== 70) {
-		displayGrade.textContent = "Pass";
-	} else {
-		displayGrade.textContent = "Fail";
-	}
-}
+			let newScore = parseInt(score.value);
+
+			if (newScore >= 70) {
+				Grade = "Pass";
+			}else{
+				Grade = "Fail";
+			}
+			
+		 
+			displayName.innerHTML = "NAME:" +"" + studentName.value;
+			displayScore.innerHTML = "SCORE:" +"" + score.value;
+			displaySubject.innerHTML = "SUNBECT:"+ ""+ subject.value;
+			displayGrade.innerHTML = Grade;
+	    };
