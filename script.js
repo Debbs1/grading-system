@@ -1,36 +1,29 @@
-let studentName = document.getElementById("student-name");
-	let subject = document.getElementById("subject");
-	let score = document.getElementById("score");
-	let gradeBtn = document.getElementById("grade-btn");
-	let displayName = document.getElementBtId('display-name');
+let formDiv = document.getElementById('form-div');
+formDiv.addEventListener("submit", (event)=>{
+event.preventDefault();
+console.log("clicked");
 
-	gradeBtn.addEventListener ("click", getGrade);
-	function getGrade()
-		{
-			if (studentName.value!=="" && studentName.value!==null) 
-			{
-				return true;
-				else if (subject.value!=="" && subject.value!==null) {
-				return true;
-				else if (score.value!=="" && score.value!==null) {
-				return true;
-			}
-			displaySubject = document.getElementBtId('display-subject');
-			displayScore = document.getElementBtId('display-score');
-			displayGrade = document.getElementBtId('display-grade');
-			displayName = document.getElementBtId('display-name');
 
-			let newScore = parseInt(score.value);
+let results = document.getElementById('results');
+let studentName = document.getElementById('student-name');
+let subject = document.getElementById('subject');
+let score = document.getElementById('score');
+let displayName = document.getElementById('display-name');
+let displaySubject = document.getElementById('display-subject');
+let displayGrade = document.getElementById('display-grade');
 
-			if (newScore >= 70) {
-				Grade = "Pass";
-			}else{
-				Grade = "Fail";
-			}
-			
-		 
-			displayName.innerHTML = "NAME:" +"" + studentName.value;
-			displayScore.innerHTML = "SCORE:" +"" + score.value;
-			displaySubject.innerHTML = "SUNBECT:"+ ""+ subject.value;
-			displayGrade.innerHTML = Grade;
-	    };
+
+if (score.value >=80){
+	displayName.innerHTML = studentName.value;
+	displaySubject.innerHTML = subject.value;
+	displayGrade.innerHTML = "Pass";
+}
+else if (score.value<80) {
+	displayName.innerHTML = studentName.value;
+	displaySubject.innerHTML = subject.value;
+	displayGrade.innerHTML = "Fail";
+}
+});
+
+
+
