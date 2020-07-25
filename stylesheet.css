@@ -45,11 +45,11 @@ p{
 	padding-right:15%;
 	padding-top: 1%;
 }
-.pass {
+.pass{
         background: green;
         color: white; 
 }
-.fail {
+.fail{
         background: red;
         color: white;
 }
