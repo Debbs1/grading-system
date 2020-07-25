@@ -17,11 +17,13 @@ if (score.value >=80){
 	displayName.innerHTML = studentName.value;
 	displaySubject.innerHTML = subject.value;
 	displayGrade.innerHTML = "Pass";
+        results.classList.add("pass");
 }
 else if (score.value<80) {
 	displayName.innerHTML = studentName.value;
 	displaySubject.innerHTML = subject.value;
 	displayGrade.innerHTML = "Fail";
+        results.classList.add("fail");
 }
 });
 
